@@ -1,5 +1,46 @@
+.App {.App {
+  text-align: center;
+}
 
-.App {
+.App-header {
+  background-color: black;
+  padding: 20px;
+  color: red;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#botoes-categorias {
+  margin-top: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#lista-filmes {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.filme-card {
+  background-color:rgb(202, 199, 199);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  width: 290px;
+}
+
+.img{
+  width: 280px;
+  height:420px;
+  border-radius: 8px;
+  
+}
   text-align: center;
 }
 
