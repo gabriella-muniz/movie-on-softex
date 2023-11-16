@@ -9,27 +9,19 @@ const SignupForm = () => {
     email: '',
     senha: '',
     confirmarSenha: '',
-    lembrarSenha: false,
+    lembrarSenha: '',
   });
 
-  const handleChange = (e) => {
-    const { id, value, type, checked } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: type === 'checkbox' ? checked : value,
-    }));
-  };
-
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aqui vai a lógica do formulário
-    console.log('Form submitted:', formData);
+    // e.preventDefault();
+    // // Espaço para adicionar a lógica do formulário
+    // console.log('Form submitted:', formData);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <h1>MOVIE ON</h1>
-      <div className="box">
+      <div>
         <h2>Crie sua conta</h2>
         <div>
           <div className="form-group">
@@ -39,8 +31,6 @@ const SignupForm = () => {
               className="form-control"
               id="nome"
               placeholder="Nome"
-              value={formData.nome}
-              onChange={handleChange}
             />
           </div>
           <div className="form-group">
@@ -50,8 +40,6 @@ const SignupForm = () => {
               className="form-control"
               id="sobrenome"
               placeholder="Sobrenome"
-              value={formData.sobrenome}
-              onChange={handleChange}
             />
           </div>
         </div>
@@ -62,8 +50,6 @@ const SignupForm = () => {
             className="form-control"
             id="telefone"
             placeholder="(__) _____-____"
-            value={formData.telefone}
-            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -73,8 +59,6 @@ const SignupForm = () => {
             className="form-control"
             id="email"
             placeholder="E-mail"
-            value={formData.email}
-            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -84,8 +68,6 @@ const SignupForm = () => {
             className="form-control"
             id="senha"
             placeholder="Senha"
-            value={formData.senha}
-            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -95,17 +77,13 @@ const SignupForm = () => {
             className="form-control"
             id="confirmarSenha"
             placeholder="Confirmar a senha"
-            value={formData.confirmarSenha}
-            onChange={handleChange}
           />
         </div>
-        <div className="form-group form-check">
+        <div className="form-group">
           <input
             type="checkbox"
             className="form-check-input"
             id="lembrarSenha"
-            checked={formData.lembrarSenha}
-            onChange={handleChange}
           />
           <label className="form-check-label" htmlFor="lembrarSenha">
             Lembrar a senha
