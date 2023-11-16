@@ -9,7 +9,7 @@ const LoginForm = () => {
         <h2>Entrar</h2>
         <div>
           <div className="form-group">
-            <label htmlFor="exampleInputEmail1"></label>
+            <label htmlFor="exampleInputEmail1"></label>  
             <input
               type="email"
               className="form-control"
@@ -26,10 +26,10 @@ const LoginForm = () => {
               placeholder="Senha"
             />
           </div>
-          <div className="form-group form-check">
+          <div className="form-group">
             <input
               type="checkbox"
-              className="form-check-input"
+              // className="form-check-input"
               id="exampleCheck1"
             />
             <label className="form-check-label" htmlFor="exampleCheck1">
@@ -40,7 +40,6 @@ const LoginForm = () => {
             Entrar
           </button>
           <div>
-            {' '}
             <a href="#">Esqueceu a senha?</a>
           </div>
           <p>
