@@ -44,8 +44,37 @@ const filmes = [
     titulo: 'Pantera Negra', 
     categoria: 'ficcao',
     imagem: "https://br.web.img3.acsta.net/c_310_420/pictures/17/12/07/16/09/2291532.jpg"
-   }
-  // Adicione mais filmes conforme necessário
+   },
+
+   { id: 9, 
+    titulo: 'Army of the Dead', 
+    categoria: 'Ação',
+    imagem: "https://t.ctcdn.com.br/Pa72VrYSEr5IOM-s9tUFr3533us=/1024x0/smart/i449333.jpeg"
+   },
+
+   { id: 10, 
+    titulo: 'Todo Poderoso', 
+    categoria: 'comedia',
+    imagem: "https://br.web.img2.acsta.net/medias/nmedia/18/95/73/93/20425650.jpg"
+   },
+
+   { id: 11, 
+    titulo: 'Um amor para recordar', 
+    categoria: 'romance',
+    imagem: "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/94/82/78/20359454.jpg"
+   },
+
+   { id: 12, 
+    titulo: 'Interestelar', 
+    categoria: 'ficcao',
+    imagem: "https://play-lh.googleusercontent.com/em2griqrHoxmxEss_WM5Fi2iqSEKrEfLNAltjX54lREOR0nz0du__KuSi2bA_YNjS4w"
+   },
+
+
+
+
+
+  
 ];
 
 const App = () => {
@@ -63,7 +92,7 @@ const App = () => {
     <>
     <div className="App">
           <header className="App-header">
-            <h1>Movie <br></br> On</h1>
+            <h1>MOVIE ON</h1>
           </header>
 
           <div className='container1'>
