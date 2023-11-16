@@ -1,44 +1,82 @@
-
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: black;
-  padding: 20px;
-  color: red;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#botoes-categorias {
-  margin-top: 10px;
-}
-
-button {
-  margin: 5px;
-  padding: 8px;
-  cursor: pointer;
-}
-
-#lista-filmes {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-
-.filme-card {
-  background-color:rgb(202, 199, 199);
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 10px;
-  width: 290px;
-}
-
-.img{
-  width: 280px;
-  height:420px;
-  border-radius: 8px;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+  }
   
-}
+  .App {
+    text-align: center;
+  }
+  
+  .App-header {
+    background-color: black;
+    padding: 20px;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 5rem;
+    height: 3.5rem;
+    background-color:rgba(202, 199, 199, 0.719);
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color:rgb(202, 199, 199);
+  }
+  
+  #lista-filmes {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  
+  .filme-card {
+    background-color:rgb(202, 199, 199);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 10px;
+    width: 230px;
+    height: 300px;
+  }
+  
+  .img{
+    width: 140px;
+    height:210px;
+    border-radius: 8px;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .sidebar {
+    width: 100px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }

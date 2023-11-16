@@ -1,13 +1,13 @@
-// src/App.js
+
 import React, { useState } from 'react';
 import './App.css';
-
-
+import Sidebar from './components/SideBar.tsx';
 
 
 const filmes = [
   {  id: 1,
-     titulo: 'JOHN WICK 4: BABA YAGA', categoria: 'Ação', imagem: 'https://universoreverso.com.br/wp-content/uploads/2023/03/john-wick-4-poster.jpg'},
+     titulo: 'JOHN WICK 4: BABA YAGA', categoria: 'Ação', 
+     imagem: 'https://universoreverso.com.br/wp-content/uploads/2023/03/john-wick-4-poster.jpg'},
   {id: 2,
      titulo: 'O Pacto (2023)',
      categoria: 'Ação', 
@@ -48,42 +48,86 @@ const filmes = [
   // Adicione mais filmes conforme necessário
 ];
 
-function App() {
+const App = () => {
   const [filmesFiltrados, setFilmesFiltrados] = useState(filmes);
-
   const filtrarPorCategoria = (categoria) => {
     if (categoria === 'todos') {
       setFilmesFiltrados(filmes);
     } else {
       const filmesFiltrados = filmes.filter((filme) => filme.categoria === categoria);
-      setFilmesFiltrados(filmesFiltrados)
-      ;
+      setFilmesFiltrados(filmesFiltrados);
     }
   };
 
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <h1>Movie <br></br> On</h1>
-        <div id="botoes-categorias">
-          <button onClick={() => filtrarPorCategoria('todos')}>Todos</button>
-          <button onClick={() => filtrarPorCategoria('Ação')}>Ação</button>
-          <button onClick={() => filtrarPorCategoria('comedia')}>Comédia</button>
-          <button onClick={() => filtrarPorCategoria('romance')}>Romance</button>
-          <button onClick={() => filtrarPorCategoria('ficcao')}>Ficção Científica</button>
+          <header className="App-header">
+            <h1>Movie <br></br> On</h1>
+          </header>
+
+          <div className='container1'>
+            <div className='Sidebar-container'>
+              <Sidebar filtrarPorCategoria={filtrarPorCategoria} filmes={[]} />
+            </div>
+          <section id="lista-filmes">
+            {filmesFiltrados.map((filme) => (
+              <div key={filme.id} className="filme-card">
+                <img className='img' src={filme.imagem} alt={filme.titulo} />
+                <h3>{filme.titulo}</h3>
+              </div>
+            ))}
+          </section>
+          
+
         </div>
-      </header>
-      <section id="lista-filmes">
-        {filmesFiltrados.map((filme) => (
-          <div key={filme.id} className="filme-card">
-            <img className='img'  src={filme.imagem} alt={filme.titulo} />
-            <h3>{filme.titulo}</h3>
-          </div>
-        ))}
-      </section>
-    </div>
+
+      </div>
+  <footer>
+  <div className="container">
+        <div className="footer-content">
+          <h3>Contato</h3>
+          <p>movieon@gmail.com</p>
+          <p>Telefone: 81 1234 5678</p>
+          <p>Endereço: Rua da Guia 142</p>
+        </div>
+
+        <div className="footer-content">
+          <h3>Categorias</h3>
+          <ul className="list">
+            <li>
+              <a href="#">Todos</a>
+            </li>
+            <li>
+              <a href="#">Ação</a>
+            </li>
+            <li>
+              <a href="#">Comédia</a>
+            </li>
+            <li>
+              <a href="#">Romance</a>
+            </li>
+            <li>
+              <a href="#">Ficção Científica</a>
+            </li>
+          </ul>
+        </div>
+
+       
+        </div>
+      
+
+      <div className="bottom-bar">
+        <p>© Copyright 2023. MOVIE ON</p>
+      </div>
+      
+  </footer>
+    
+
+
+      </>
   );
-}
+};
 
 export default App;
 
